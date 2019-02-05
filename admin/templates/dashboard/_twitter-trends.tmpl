@@ -1,0 +1,57 @@
+<div class="row gap-y">
+    <div class="col-lg-6">
+        <div class="text-center mb-5">
+            <h5 class="bold text-success">Topics frequently mentioned</h5>
+            <p class="my-0 color-2 alpha-5 small">
+                <span class="italic">with</span>
+                <span class="bold">@GenesisTemplate</span>
+            </p>
+        </div>
+
+        {{#each topics}}
+            <div class="d-flex align-items-center">
+                <div class="flex-fill">
+                    <p class="bold text-success my-0">{{title}}</p>
+                    <ul class="list-unstyled nav">
+                    {{#each tags}}
+                        <li class="mr-2 color-2 alpha-5">{{label}}</li>
+                    {{/each}}
+                    </ul>
+                </div>
+                <span class="font-lg bold text-success">{{used}}</span>
+            </div>
+
+            <div class="progress progress-xs">
+                <div class="progress-bar bg-success" style="width: {{percentage}}%;"></div>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="col-lg-6">
+        <div class="text-center mb-5">
+            <h5 class="bold text-info">Topics frequently mentioned</h5>
+            <p class="my-0 color-2 alpha-5 small">
+                <span class="italic">with</span>
+                <span class="bold">@GenesisTemplate</span>
+            </p>
+        </div>
+
+        {{#each hashtags}}
+        <div class="d-flex align-items-center">
+            <div class="flex-fill">
+                <p class="bold text-info my-0">{{title}}</p>
+                <ul class="list-unstyled nav">
+                    {{#each tags}}
+                    <li class="mr-2 color-2 alpha-5">{{label}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <span class="font-lg bold text-info">{{used}}</span>
+        </div>
+
+        <div class="progress progress-xs">
+            <div class="progress-bar bg-info" style="width: {{percentage}}%;"></div>
+        </div>
+        {{/each}}
+    </div>
+</div>

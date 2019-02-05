@@ -1,0 +1,9 @@
+[
+  { "description": "DashCore now on themeforest", "time": "just now", "icon": "bullhorn", "labeled": true, "status": "primary" },
+  { "description": "DashCore nominated to themes award", "time": "3 mins", "icon": "trophy", "labeled": true, "status": "success" },
+  { "description": "Account space at 88%", "time": "15 mins", "icon": "arrow-right", "labeled": true, "status": "danger" },
+  { "description": "New user registration", "time": "4 hrs", "icon": "user-plus", "status": "primary" },
+  { "description": "New support request", "time": "9 hrs", "icon": "life-ring", "status": "warning" },
+  { "description": "Documentation updated", "time": "yesterday", "icon": "file-alt", "status": "success" },
+  { "description": "New comment", "time": "2 days", "icon": "comment-alt" }
+]

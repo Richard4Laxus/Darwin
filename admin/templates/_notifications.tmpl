@@ -1,0 +1,12 @@
+{{#each this}}
+<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+    <span class="text-{{status}}">
+        <i class="icon fas fa-{{icon}}"></i>
+    </span>
+
+    <p class="small bold mb-0 d-flex flex-column">
+        <span>{{description}}</span>
+        <span class="text-muted small">{{time}}</span>
+    </p>
+</a>
+{{/each}}

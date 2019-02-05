@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.askdarwin.com [NC]
+RewriteRule ^(.*)$ https://askdarwin.com/$1 [L,R=301]

@@ -1,0 +1,24 @@
+<div class="email-header">
+    <div class="media">
+        <img src="{{from.picture}}" class="rounded-circle mr-3 shadow-sm icon-lg align-self-center" alt="">
+
+        <div class="media-body">
+            <h6 class="bold text-capitalize my-0">{{from.name}}</h6>
+            <p class="mb-0 color-2 alpha-5 small">{{from.email}}</p>
+        </div>
+    </div>
+
+    <div class="subject b-b py-2 my-4 d-flex align-items-center justify-content-between">
+        <p class="bold text-capitalize">
+            {{subject}}
+        </p>
+
+        <div class="btn-group btn-group-reply ml-auto">
+            <button type="button" class="btn btn-outline-2 x-3"><i class="fas fa-reply"></i></button>
+            <button type="button" class="btn btn-outline-2 x-3"><i class="fas fa-reply-all"></i></button>
+            <button type="button" class="btn btn-outline-2 x-3"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="email-body">{{{body}}}</div>

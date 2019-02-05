@@ -1,0 +1,24 @@
+{{#each this}}
+   <p class="regular accent text-uppercase pl-3 small my-4">{{group}}</p>
+
+    <div class="list list-hover list-group-flush">
+    {{#each items}}
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action" data-email="{{id}}">
+        <div class="media">
+            <img src="{{from.picture}}" class="rounded-circle mr-3 shadow-sm icon-md" alt="">
+
+            <div class="media-body small pb-5">
+                <p class="small mb-0 color-2 alpha-5 d-flex justify-content-between">
+                    <span class="bold text-capitalize">{{from.name}}</span>
+                    <span class="ml-auto">{{time}}</span>
+                </p>
+                <div class="w-100 absolute">
+                    <p class="bold text-truncate text-capitalize mb-2">{{subject}}</p>
+                    <p class="small text-truncate mb-0">{{strip-html body}}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+    </div>
+{{/each}}

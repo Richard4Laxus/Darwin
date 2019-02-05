@@ -1,0 +1,25 @@
+<div class="table-responsive">
+<table class="table">
+    <tbody>
+    {{#each this}}
+    <tr>
+        <td data-title="">
+            <img src="../img/svg/flags/{{country.code}}.svg" class="icon-md" alt="">
+        </td>
+        <td data-title="Country">
+            {{country.name}}
+        </td>
+        <td data-title="Audience">
+            <small class="task d-flex w-100 justify-content-between">
+                {{numberFormat value}}
+                <span class="bold text-{{bg}}">{{percentage}} %</span>
+            </small>
+            <div class="progress progress-xs">
+                <div class="progress-bar bg-{{bg}}" style="width: {{percentage}}%;"></div>
+            </div>
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+</div>

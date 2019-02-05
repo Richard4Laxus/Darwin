@@ -1,0 +1,793 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+	<title>Dashcore - Admin HTML Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+	<link rel="icon" href="../../favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/bootstrap-select.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/fontawesome-all.css">
+	<link rel="stylesheet" href="../css/fullcalendar.css">
+	<link rel="stylesheet" href="../css/helper.css">
+	<link rel="stylesheet" href="../css/pe-icon-7-stroke.css">
+	<link rel="stylesheet" href="../css/scroller.css">
+	<link rel="stylesheet" href="../css/simplebar.css">
+	<link rel="stylesheet" href="../css/smart_wizard_theme_arrows.css">
+	<link rel="stylesheet" href="../css/smart_wizard_theme_circles.css">
+	<link rel="stylesheet" href="../css/smart_wizard_theme_dots.css">
+	<link rel="stylesheet" href="../css/smart_wizard.css">
+	<link rel="stylesheet" href="../css/swiper.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+	<header class="main-header">
+		<nav class="navbar navbar-expand-md bg-3">
+			<div class="navbar-logo p-3 py-md-0">
+				<a class="navbar-brand" href="../index.html">
+					<img src="../../img/logo-light.png" alt="" class="logo"> </a>
+				<button type="button" class="navbar-toggler">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-options px-3 px-md-4">
+				<form class="form search-form mr-auto" action="../search-result.html" method="GET" id="header-search">
+					<div class="form-group mb-0 d-flex position-relative">
+						<input type="text" class="form-control pl-5" placeholder="Search for..." name="q">
+						<button type="submit" class="btn btn-link pl-0 pt-2">
+							<i class="pe pe-7s-search pe-2x"></i>
+						</button>
+					</div>
+				</form>
+				<ul class="nav">
+					<li class="nav-item tasks dropdown" data-rel="tasks">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+							<i class="pe pe-7s-menu"></i>
+							<span class="badge badge-pill badge-info">6</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-heading d-flex align-items-center justify-content-between">
+								<h6 class="m-0 text-uppercase bold">Tasks</h6>
+								<small class="text-muted">
+									<span class="bold number">6</span> pending</small>
+							</div>
+							<div class="dropdown-body list list-group list-group-flush load-content">
+								<div class="loader-container">
+									<div class="loader-8">Loading...</div>
+								</div>
+							</div>
+							<div class="dropdown-footer text-center">
+								<a href="#" title="">
+									<i class="fas fa-ellipsis-h"></i>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item notifications dropdown" data-rel="notifications">
+						<a href="#" class="nav-link dropdown-toggle pl-4" data-toggle="dropdown">
+							<i class="pe pe-7s-bell"></i>
+							<span class="badge badge-pill badge-info">11</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-heading d-flex align-items-center justify-content-between">
+								<h6 class="m-0 text-uppercase bold">Notifications</h6>
+								<small class="text-muted">
+									<span class="bold number">7</span> new</small>
+							</div>
+							<div class="list list-unstyled list-hover list-bordered dropdown-body load-content">
+								<div class="loader-container">
+									<div class="loader-8">Loading...</div>
+								</div>
+							</div>
+							<div class="dropdown-footer text-center">
+								<a href="#" title="">
+									<i class="fas fa-ellipsis-h"></i>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item messages dropdown" data-rel="messages">
+						<a href="#" class="nav-link dropdown-toggle pl-4" data-toggle="dropdown">
+							<i class="pe pe-7s-mail"></i>
+							<span class="badge badge-pill badge-info">9</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-heading d-flex align-items-center justify-content-between">
+								<h6 class="m-0 text-uppercase bold">Messages</h6>
+								<small class="text-muted">
+									<span class="bold number">9</span> unread</small>
+							</div>
+							<div class="list list-hover dropdown-body load-content">
+								<div class="loader-container">
+									<div class="loader-8">Loading...</div>
+								</div>
+							</div>
+							<div class="dropdown-footer text-center">
+								<a href="#" title="">
+									<i class="fas fa-ellipsis-h"></i>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item account dropdown">
+						<a href="#" class="nav-link dropdown-toggle pl-4" data-toggle="dropdown">
+							<img src="" class="avatar user-avatar rounded-circle" alt="...">
+							<i class="fas fa-angle-down"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-heading rounded-top bg-3 arrow top color-1">
+								<div class="content py-1">
+									<div class="media align-items-center">
+										<img src="" class="user-avatar shadow mr-2 rounded-circle" alt="">
+										<div class="media-body">
+											<span class="bold color-1 user-name text-overflow text-capitalize">...</span>
+											<p class="small user-info text-overflow capitalize-first mb-0 op-5">...</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="dropdown-body list list-group list-group-flush">
+								<li class="list-group-item list-group-item-action">
+									<a href="#">
+										<i class="mr-3 fas fa-user"></i>Profile</a>
+								</li>
+								<li class="list-group-item list-group-item-action">
+									<a href="#">
+										<i class="mr-3 fas fa-cogs"></i>Settings</a>
+								</li>
+								<li class="list-group-item list-group-item-action">
+									<a href="#">
+										<i class="mr-3 fas fa-life-ring"></i>Help</a>
+								</li>
+							</ul>
+							<div class="dropdown-footer bg-1 d-flex justify-content-between align-items-center">
+								<a href="#" class="btn btn-rounded btn-3">
+									<i class="mr-3 fas fa-sign-out-alt"></i>Log out </a>
+								<a href="#" class="text-danger">
+									<i class="mr-3 fas fa-lock"></i>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="aside-toggler" data-behavior="absolute">
+						<a href="#">
+							<i class="pe pe-7s-keypad"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="main-body">
+		<nav class="side-nav">
+			<div class="side-wrapper">
+				<div class="nav-wrapper">
+					<ul class="nav flex-column">
+						<!-- USER -->
+						<li class="nav-item user-sidebar nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<div class="media align-items-center justify-content-center">
+									<div class="position-relative">
+										<img src="" class="user-avatar rounded-circle mr-2" alt="">
+										<span class="status status-right online"></span>
+									</div>
+									<div class="media-body title">
+										<span class="media-heading bold user-name text-truncate text-capitalize">...</span>
+										<div class="small user-info text-truncate capitalize-first text-muted">...</div>
+									</div>
+								</div>
+							</a>
+							<div class="nav-dropdown-items">
+								<div class="stat">
+									<p class="small task d-flex justify-content-between mb-1">
+										<span class="text-muted">You're running out of space</span>
+										<span class="bold percent text-danger">94%</span>
+									</p>
+									<div class="progress progress-xs mb-4">
+										<div class="progress-bar bg-danger" style="width: 94%;"></div>
+									</div>
+								</div>
+								<nav class="nav justify-content-between">
+									<a href="javascript:void(0)" class="nav-link py-3">
+										<i class="mr-1 fas fa-inbox"></i>
+										<span class="small">Inbox</span>
+										<small class="badge badge-primary">7</small>
+									</a>
+									<a href="javascript:void(0)" class="nav-link py-3">
+										<i class="mr-1 fas fa-lock"></i>
+										<span class="small">Lock</span>
+									</a>
+									<a href="javascript:void(0)" class="nav-link py-3">
+										<i class="mr-1 fas fa-sign-out-alt"></i>
+										<span class="small">Log out</span>
+									</a>
+								</nav>
+							</div>
+						</li>
+						<!-- MAIN -->
+						<li class="nav-header pt-4">
+							<span>Main</span>
+						</li>
+						<li class="nav-item">
+							<a href="../index.html" class="nav-link">
+								<i class="icon pe pe-7s-display1"></i>
+								<span class="title">Dashboard</span>
+							</a>
+						</li>
+						<!-- Layout -->
+						<li class="nav-item nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<i class="icon pe pe-7s-box2"></i>
+								<span class="title">Layout</span>
+							</a>
+							<ul class="nav-dropdown-items">
+								<li>
+									<a href="../index.html" class="nav-link">
+										<b class="icon extra-bold">D</b>
+										<span class="title">Default</span>
+									</a>
+								</li>
+								<li>
+									<a href="../gradient-sidebar.html" class="nav-link">
+										<b class="icon extra-bold">G</b>
+										<span class="title">Gradient navigation</span>
+									</a>
+								</li>
+								<!-- Add locked layouts -->
+								<li>
+									<span class="nav-link disabled">
+										<b class="icon extra-bold">F</b>
+										<span class="title">Fixed navbar &amp; sidebar</span>
+										<i class="pe pe-7s-lock icon ml-auto mr-0 text-warning"></i>
+									</span>
+								</li>
+							</ul>
+						</li>
+						<!-- Forms -->
+						<li class="nav-item nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<i class="icon pe pe-7s-switch"></i>
+								<span class="title">Forms</span>
+							</a>
+							<ul class="nav-dropdown-items">
+								<li>
+									<span class="nav-link">
+										<b class="icon extra-bold">E</b>
+										<span class="title">Form elements</span>
+										<i class="pe pe-7s-lock icon ml-auto mr-0 text-warning"></i>
+									</span>
+								</li>
+							</ul>
+						</li>
+						<!-- Tables -->
+						<li class="nav-item nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<i class="icon pe pe-7s-browser"></i>
+								<span class="title">Tables</span>
+							</a>
+							<ul class="nav-dropdown-items">
+								<li class="nav-dropdown">
+									<a href="javascript:void(0)" class="nav-link">
+										<i class="icon fab fa-html5 font-sm"></i>
+										<span class="title">HTML tables</span>
+									</a>
+									<ul class="nav-dropdown-items">
+										<li>
+											<a href="../tables/basic.html" class="nav-link">
+												<b class="icon extra-bold">B</b>
+												<span class="title">Basic</span>
+											</a>
+										</li>
+										<li>
+											<a href="../tables/responsive.html" class="nav-link">
+												<b class="icon extra-bold">R</b>
+												<span class="title">Responsive</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-dropdown">
+									<a href="javascript:void(0)" class="nav-link">
+										<i class="icon fas fa-table font-sm"></i>
+										<span class="title">DataTables</span>
+									</a>
+									<ul class="nav-dropdown-items">
+										<li>
+											<a href="../datatables/basic.html" class="nav-link">
+												<b class="icon extra-bold">B</b>
+												<span class="title">Basic</span>
+											</a>
+										</li>
+										<li>
+											<a href="../datatables/ajax.html" class="nav-link">
+												<b class="icon extra-bold">A</b>
+												<span class="title">Ajax</span>
+											</a>
+										</li>
+										<li>
+											<a href="../datatables/checkbox-select.html" class="nav-link">
+												<b class="icon extra-bold">C</b>
+												<span class="title">Checkbox</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- /MAIN -->
+						<!-- Pages -->
+						<li class="nav-item nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<i class="icon pe pe-7s-bookmarks"></i>
+								<span class="title">Pages</span>
+							</a>
+							<ul class="nav-dropdown-items">
+								<li class="nav-dropdown">
+									<a href="javascript:void(0)" class="nav-link">
+										<i class="icon fas font-sm fa-exclamation-circle"></i>
+										<span class="title">Error</span>
+									</a>
+									<ul class="nav-dropdown-items">
+										<li>
+											<a href="../../403.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold font-sm">403</b>
+												<span class="title">403</span>
+											</a>
+										</li>
+										<li>
+											<a href="../../404.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold font-sm">404</b>
+												<span class="title">404</span>
+											</a>
+										</li>
+										<li>
+											<a href="../../500.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold font-sm">405</b>
+												<span class="title">500</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-dropdown">
+									<a href="javascript:void(0)" class="nav-link">
+										<i class="icon fas font-sm fa-user"></i>
+										<span class="title">User</span>
+									</a>
+									<ul class="nav-dropdown-items">
+										<li>
+											<a href="../../login.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold">L</b>
+												<span class="title">Login</span>
+											</a>
+										</li>
+										<li>
+											<a href="../../forgot.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold">P</b>
+												<span class="title">Recover Password</span>
+											</a>
+										</li>
+										<li>
+											<a href="../../register.html" target="_blank" class="nav-link">
+												<b class="icon extra-bold">R</b>
+												<span class="title">Register</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- Apps -->
+						<li class="nav-header">
+							<span class="title">Apps</span>
+						</li>
+						<li class="nav-item">
+							<a href="../inbox.html" class="nav-link">
+								<i class="icon pe pe-7s-mail"></i>
+								<span class="title">Mail</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../calendar.html" class="nav-link">
+								<i class="icon pe pe-7s-date"></i>
+								<span class="title">Calendar</span>
+							</a>
+						</li>
+						<li class="nav-item nav-dropdown">
+							<a href="javascript:void(0)" class="nav-link">
+								<i class="icon pe pe-7s-note2"></i>
+								<span class="title">Invoices</span>
+							</a>
+							<ul class="nav-dropdown-items">
+								<li>
+									<a href="../invoice-1.html" class="nav-link">
+										<b class="icon extra-bold">1</b>
+										<span class="title">Version 1</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main class="overflow-hidden">
+			<header class="page header">
+				<div class="content">
+					<h1 class="display-4 mb-0">HTML Tables</h1>
+					<p class="lead text-muted">Responsive tables</p>
+				</div>
+			</header>
+			<div class="content">
+				<div class="table-responsive">
+					<table id="html-table" class="table table-hover table-clean">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tiger Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+							</tr>
+							<tr>
+								<td>Garrett Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+							</tr>
+							<tr>
+								<td>Ashton Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+							</tr>
+							<tr>
+								<td>Cedric Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+							</tr>
+							<tr>
+								<td>Airi Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+								<td>$162,700</td>
+							</tr>
+							<tr>
+								<td>Brielle Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+								<td>$372,000</td>
+							</tr>
+							<tr>
+								<td>Herrod Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+								<td>$137,500</td>
+							</tr>
+							<tr>
+								<td>Rhona Davidson</td>
+								<td>Integration Specialist</td>
+								<td>Tokyo</td>
+								<td>55</td>
+								<td>2010/10/14</td>
+								<td>$327,900</td>
+							</tr>
+							<tr>
+								<td>Colleen Hurst</td>
+								<td>Javascript Developer</td>
+								<td>San Francisco</td>
+								<td>39</td>
+								<td>2009/09/15</td>
+								<td>$205,500</td>
+							</tr>
+							<tr>
+								<td>Sonya Frost</td>
+								<td>Software Engineer</td>
+								<td>Edinburgh</td>
+								<td>23</td>
+								<td>2008/12/13</td>
+								<td>$103,600</td>
+							</tr>
+							<tr>
+								<td>Jena Gaines</td>
+								<td>Office Manager</td>
+								<td>London</td>
+								<td>30</td>
+								<td>2008/12/19</td>
+								<td>$90,560</td>
+							</tr>
+							<tr>
+								<td>Quinn Flynn</td>
+								<td>Support Lead</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2013/03/03</td>
+								<td>$342,000</td>
+							</tr>
+							<tr>
+								<td>Charde Marshall</td>
+								<td>Regional Director</td>
+								<td>San Francisco</td>
+								<td>36</td>
+								<td>2008/10/16</td>
+								<td>$470,600</td>
+							</tr>
+							<tr>
+								<td>Haley Kennedy</td>
+								<td>Senior Marketing Designer</td>
+								<td>London</td>
+								<td>43</td>
+								<td>2012/12/18</td>
+								<td>$313,500</td>
+							</tr>
+							<tr>
+								<td>Tatyana Fitzpatrick</td>
+								<td>Regional Director</td>
+								<td>London</td>
+								<td>19</td>
+								<td>2010/03/17</td>
+								<td>$385,750</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		<aside class="quick-view">
+			<div class="side-wrapper">
+				<nav class="nav nav-tabs nav-fill tabs-clean slide">
+					<a class="nav-item nav-link active" data-toggle="tab" href="#aside-profile">
+						<i class="far fa-id-card icon"></i>
+					</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#aside-todo" data-rel="todos">
+						<i class="fas fa-list-ul icon"></i>
+					</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#aside-users" data-rel="users">
+						<i class="fas fa-users icon"></i>
+					</a>
+					<a class="nav-item nav-link" data-toggle="tab" href="#aside-settings">
+						<i class="fas fa-cog icon"></i>
+					</a>
+				</nav>
+				<div class="tab-content">
+					<div class="tab-pane active" id="aside-profile">
+						<ul class="list-unstyled d-flex justify-content-between text-left pt-3">
+							<li>
+								<p class="mb-0 small text-uppercase color-2">followers</p>
+								<h4>2.7k</h4>
+							</li>
+							<li>
+								<p class="mb-0 small text-uppercase color-2">friends</p>
+								<h4>1.3k</h4>
+							</li>
+							<li>
+								<p class="mb-0 small text-uppercase color-2">posts</p>
+								<h4>451</h4>
+							</li>
+						</ul>
+						<hr class="my-3">
+						<p class="regular text-uppercase">Favorite categories</p>
+						<div class="row gap-y">
+							<div class="col-6">
+								<a class="btn btn-5 d-flex flex-column align-items-center py-4" href="">
+									<i class="w-50">
+										<img src="../../img/svg/design.svg" class="img-responsive" alt="">
+									</i>
+									<p class="mb-0">Design</p>
+								</a>
+							</div>
+							<div class="col-6">
+								<a class="btn btn-4 d-flex flex-column align-items-center py-4" href="">
+									<i class="w-50">
+										<img src="../../img/svg/marketing.svg" class="img-responsive" alt="">
+									</i>
+									<p class="mb-0">Marketing</p>
+								</a>
+							</div>
+							<div class="col-6">
+								<a class="btn btn-3 d-flex flex-column align-items-center py-4" href="">
+									<i class="w-50">
+										<img src="../../img/svg/mobile.svg" class="img-responsive" alt="">
+									</i>
+									<p class="mb-0">Mobile</p>
+								</a>
+							</div>
+							<div class="col-6">
+								<a class="btn btn-danger d-flex flex-column align-items-center py-4" href="">
+									<i class="w-50">
+										<img src="../../img/svg/cloud.svg" class="img-responsive" alt="">
+									</i>
+									<p class="mb-0">Cloud</p>
+								</a>
+							</div>
+						</div>
+						<hr class="my-3">
+						<p class="regular text-uppercase">Quick overview</p>
+						<ul class="list-unstyled">
+							<li class="stat">
+								<p class="small d-flex justify-content-between mb-1">
+									<span class="text-muted">Profile almost complete</span>
+									<span class="bold text-success">75%</span>
+								</p>
+								<div class="progress progress-xs mb-4">
+									<div class="progress-bar bg-success" style="width: 75%;"></div>
+								</div>
+							</li>
+							<li>
+								<p class="small d-flex justify-content-between mb-1">
+									<span class="text-muted">Tasks done</span>
+									<span class="bold text-info">50%</span>
+								</p>
+								<div class="progress progress-xs mb-4">
+									<div class="progress-bar bg-info" style="width: 50%;"></div>
+								</div>
+							</li>
+							<li>
+								<p class="small d-flex justify-content-between mb-1">
+									<span class="text-muted">You're running out of space</span>
+									<span class="bold text-danger">94%</span>
+								</p>
+								<div class="progress progress-xs mb-4">
+									<div class="progress-bar bg-danger" style="width: 94%;"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="aside-todo">
+						<ul class="list-group list-group-flush load-content aside--todo-list">
+							<li class="loader-container">
+								<div class="loader-8">Loading...</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="aside-users">
+						<form class="form">
+							<div class="input-group clean-group mb-3">
+								<input type="text" class="form-control" placeholder="Search user ..." name="q">
+								<div class="input-group-append">
+									<button class="btn btn-1" type="button">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+						<div class="list-group list-group-flush load-content aside--users-list">
+							<div class="loader-container">
+								<div class="loader-8">Loading...</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="aside-settings">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item px-0">
+								<h4 class="small bold mb-4">Email settings</h4>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<div class="mr-3">
+										<p class="regular mb-0 color-5">Automatic response</p>
+										<p class="color-2 mb-0 small">(Experimental) Configure an automated response</p>
+									</div>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-1" type="checkbox">
+										<label class="tgl-btn tgl-btn-4" for="tgl-1"></label>
+									</div>
+								</div>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<div class="mr-3">
+										<p class="regular mb-0 color-5">Daily summary emails</p>
+										<p class="color-2 mb-0 small">Send me a daily summary of all my activity</p>
+									</div>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-2" type="checkbox" checked="checked">
+										<label class="tgl-btn tgl-btn-4" for="tgl-2"></label>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item px-0">
+								<h4 class="small bold mb-4">Personal settings</h4>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<p class="regular mb-0 color-5 mr-3">Other can view my status</p>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-3" type="checkbox">
+										<label class="tgl-btn tgl-btn-4" for="tgl-3"></label>
+									</div>
+								</div>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<p class="regular mb-0 color-5 mr-3">Allow remote access</p>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-4" type="checkbox" checked="checked">
+										<label class="tgl-btn tgl-btn-4" for="tgl-4"></label>
+									</div>
+								</div>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<p class="regular mb-0 color-5 mr-3">Automatic signing</p>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-5" type="checkbox">
+										<label class="tgl-btn tgl-btn-4" for="tgl-5"></label>
+									</div>
+								</div>
+								<div class="mb-3 d-flex justify-content-between align-items-center">
+									<p class="regular mb-0 color-5 mr-3">Clear cache on log off</p>
+									<div class="form-group mb-0">
+										<input class="tgl tgl-light" id="tgl-6" type="checkbox" checked="checked">
+										<label class="tgl-btn tgl-btn-4" for="tgl-6"></label>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+	<!-- FOOTER -->
+	<footer class="main-footer">
+		<div class="container-fluid d-flex justify-content-between small">
+			<span>&copy; 2018.
+				<a href="../index.html">Dashcore Admin</a> by
+				<a href="http://5studios.net">5studios.net</a>
+			</span>
+			<span class="color-2">v1.0</span>
+		</div>
+	</footer>
+
+	<script src="../js/swiper.js"></script>
+	<script src="../js/popper.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script src="../js/jquery.validate.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jquery.waypoints.js"></script>
+	<script src="../js/jquery.counterup.js"></script>
+	<script src="../js/jquery.smartWizard.js"></script>
+	<script src="../js/simplebar.js"></script>
+	<script src="../js/modernizr-2.8.3.min.js"></script>
+	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/handlebars.js"></script>
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/moment.js"></script>
+	<script src="../js/fullcalendar.js"></script>
+	<script src="../js/bootstrap-select.js"></script>
+
+	<script src="../js/common-script.js"></script>
+	<script src="../js/00.configuration.js"></script>
+	<script src="../js/01.1.templates.js"></script>
+	<script src="../js/01.2.data.js"></script>
+	<script src="../js/02.navigation.js"></script>
+	<script src="../js/03.charts.js"></script>
+	<script src="../js/04.script.js"></script>
+</body>
+
+</html>

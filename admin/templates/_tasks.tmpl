@@ -1,0 +1,12 @@
+{{#each this}}
+<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <small class="task d-flex w-100 justify-content-between">
+        {{description}}
+        <span class="bold text-{{status}}">{{percentage}} %</span>
+    </small>
+
+    <div class="progress progress-xs">
+        <div class="progress-bar bg-{{status}}" style="width: {{percentage}}%;"></div>
+    </div>
+</a>
+{{/each}}
